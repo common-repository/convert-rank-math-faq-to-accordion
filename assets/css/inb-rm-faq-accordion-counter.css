@@ -1,0 +1,20 @@
+#rank-math-faq .rank-math-question {
+    padding: 15px 54px 15px 36px;
+}
+
+#rank-math-faq .rank-math-list-item {
+    counter-increment: my-question-counter;
+}
+
+#rank-math-faq .rank-math-question::before {
+    content: counter(my-question-counter) ".";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 36px;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
